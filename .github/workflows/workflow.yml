@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@v2 
+      - uses: actions/checkout@v1 
       - name: Deploy in EC2
         env:
             PRIVATE_KEY: ${{ secrets.AWS_PRIVATE_KEY  }}
@@ -18,7 +18,10 @@ jobs:
             USER_NAME : ${{ secrets.USER_NAME  }}
             
         run: |
-            #Now we have got the access of EC2 and we will start the deploy .
+          echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
+          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
+          #Now we have got the access of EC2 and we will start the deploy .
             cd /home/ec2-user/thd &&
             git pull origin dev &&
             python3 main.py
+           
