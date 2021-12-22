@@ -19,6 +19,6 @@ jobs:
             
         run: |
             #Now we have got the access of EC2 and we will start the deploy .
-            cd /home/ec2-user/thd / &&
+            cd /home/ec2-user/thd &&
             git pull origin dev &&
             python3 main.py
