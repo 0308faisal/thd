@@ -27,6 +27,6 @@ jobs:
           git checkout main &&
           git fetch --all &&
           git pull origin dev &&
-          pm2 stop 0 && pm2 start 0 && exit
+          script: sh deploy.sh
           '
            
