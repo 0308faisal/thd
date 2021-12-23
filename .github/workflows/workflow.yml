@@ -27,6 +27,6 @@ jobs:
           git checkout main &&
           git fetch --all &&
           git pull origin dev &&
-          python3 main.py && exit
+          pm2 stop main.py && pm2 start main.py && exit
           '
            
