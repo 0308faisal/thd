@@ -2,7 +2,7 @@ name: CI/CD counter app
 
 on:
   pull_request:
-  branches: [ dev ]
+    branches: [ dev ]
 jobs:
   build:
     runs-on: ubuntu-latest
