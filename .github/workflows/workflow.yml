@@ -8,10 +8,10 @@ jobs:
   runs-on: ubuntu-latest
   steps:
       - uses: actions/checkout@v2
-      - run: python main.py  
-jobs:
-
+      - run: python main.py 
+  
   Deploy:
+   
     needs: build 
     runs-on: ubuntu-latest
     steps:
