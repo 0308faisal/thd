@@ -2,11 +2,17 @@ name: CI/CD counter app
 
 on:
   pull_request:
-    branches: [ dev ]
-
+  branches: [ dev ]
+jobs:
+  build:
+  runs-on: ubuntu-latest
+  steps:
+      - uses: actions/checkout@v2
+      - run: python main.py  
 jobs:
 
   Deploy:
+    needs: build 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2 
