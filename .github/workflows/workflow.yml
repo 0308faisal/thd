@@ -7,11 +7,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: python main.py 
+      - uses: actions/checkout@v2 
   Deploy:
-   
-    needs: build 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2 
