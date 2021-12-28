@@ -24,6 +24,7 @@ jobs:
           #Now we have got the access of EC2 and we will start the deploy .
           hostname
           cd /home/ec2-user/ &&
+          git init
           git checkout main &&
           git fetch --all &&
           git pull origin dev &&
