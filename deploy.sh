@@ -1,1 +1,2 @@
-python3 main.py
+systemctl daemon-reload
+systemctl start testing.service
