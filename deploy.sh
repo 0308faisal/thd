@@ -1,3 +1,3 @@
-sudo su
-systemctl daemon-reload
-systemctl start testing.service
+sudo systemctl daemon-reload
+sudo systemctl start testing.service
+exit
