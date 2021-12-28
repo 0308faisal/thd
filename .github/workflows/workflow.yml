@@ -26,6 +26,7 @@ jobs:
           cd /home/ec2-user/ &&
           git init
           git clone https://github.com/0308faisal/thd.git
+          cd thd/ &&
           git checkout main &&
           git fetch --all &&
           git pull origin dev &&
